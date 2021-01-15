@@ -53,6 +53,10 @@ public class landingpage {
 		submit.click();;
 	}
     
+    @FindBy(xpath="//*[@id=\"homepage\"]/header/div[1]/div/nav/ul/li[4]/a/span")
+	WebElement Login1S;
+
+    
     public String title() {
 		return title.getText();
 	}

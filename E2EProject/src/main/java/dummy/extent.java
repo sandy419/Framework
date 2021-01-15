@@ -43,5 +43,14 @@ public class extent {
 		driver.close();
 
 	}
+	
+	
+	irefoxOptions fo = new FirefoxOptions();
+	fo.addArguments("--privatewindow");
+	System.setProperty("webdriver.gecko.driver","D:\\Workspace\\E2EProject\\drivers\\geckodriver.exe");
+	driver = new FirefoxDriver(fo);
+	driver.get("http://qaclickacademy.com/");
+	List<WebElement> links = driver.findElements(By.tagName("a"));
+	System.out.println(links.size());
 
 }
