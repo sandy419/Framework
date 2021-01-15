@@ -22,8 +22,7 @@ public class Homepage extends Base{
 		landingpage lp = new landingpage(driver);
 		lp.getlogin();
 		lp.getemail(email);
-		lp.getpassword(password);
-		lp.getsubmit();
+		
 		
 	}
 	
