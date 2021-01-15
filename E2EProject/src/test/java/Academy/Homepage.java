@@ -18,6 +18,13 @@ public class Homepage extends Base{
 		lp.getpassword(password);
 		lp.getsubmit();
 		
+		driver.get("http://qaclickacademy.com");
+		landingpage lp = new landingpage(driver);
+		lp.getlogin();
+		lp.getemail(email);
+		lp.getpassword(password);
+		lp.getsubmit();
+		
 	}
 	
 	@DataProvider
