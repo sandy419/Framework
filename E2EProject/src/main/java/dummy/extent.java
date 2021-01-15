@@ -39,6 +39,13 @@ public class extent {
 			else if (rescode>200) {
 				System.out.println(element + "is broken");
 			}
+			irefoxOptions fo = new FirefoxOptions();
+			fo.addArguments("--privatewindow");
+			System.setProperty("webdriver.gecko.driver","D:\\Workspace\\E2EProject\\drivers\\geckodriver.exe");
+			driver = new FirefoxDriver(fo);
+			driver.get("http://qaclickacademy.com/");
+			List<WebElement> links = driver.findElements(By.tagName("a"));
+			System.out.println(links.size());
 		}
 		driver.close();
 
@@ -51,12 +58,5 @@ public class extent {
 	List<WebElement> links = driver.findElements(By.tagName("a"));
 	System.out.println(links.size());
 	
-	irefoxOptions fo = new FirefoxOptions();
-	fo.addArguments("--privatewindow");
-	System.setProperty("webdriver.gecko.driver","D:\\Workspace\\E2EProject\\drivers\\geckodriver.exe");
-	driver = new FirefoxDriver(fo);
-	driver.get("http://qaclickacademy.com/");
-	List<WebElement> links = driver.findElements(By.tagName("a"));
-	System.out.println(links.size());
-
+	
 }
