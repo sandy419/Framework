@@ -41,6 +41,20 @@ public class extent {
 			}
 		
 		}
+		
+		int len = links.size();
+		for(int i=0;i<len;i++) {
+			WebElement element = links.get(i);
+			String url = element.getAttribute("href");
+			URL link = new URL(url);
+			HttpURLConnection hc = (HttpURLConnection)link.openConnection();
+			//hc.setConnectTimeout(1000);
+			hc.connect();
+			int rescode = hc.getResponseCode();
+			if(rescode==200) {
+				System.out.println(element +"is valid");
+				
+			}
 		driver.close();
 
 	}
